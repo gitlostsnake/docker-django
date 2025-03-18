@@ -28,7 +28,6 @@ class CustomUserTests(TestCase):
         self.assertTrue(admin_user.is_superuser)
         self.assertFalse(admin_user.has_done)
 
-
     def test_custom_user_fields(self):
         # Dedicated function for testing out the custom fields of the user model
         user = self.User.objects.create_user(
