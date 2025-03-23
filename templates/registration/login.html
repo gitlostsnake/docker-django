@@ -1,10 +1,13 @@
 {% extends "base/base.html" %}
-
+{% load static %}
 {% block content %}
 <h1>LOGIN page</h1>
+
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
 </form>
+
+<img class="bookcover" src="{% static 'images/bookcoverTest.jpg' %}" >
 {% endblock %}

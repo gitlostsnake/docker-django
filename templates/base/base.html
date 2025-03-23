@@ -1,11 +1,16 @@
+<!DOCTYPE html>
 <html>
+    {% load static %}
+    <head>
+        {% block head %}
+        {% endblock %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
 
-<head>
-    {% block head %}
+    {% block content %}
     {% endblock %}
-</head>
 
-{% block content %}
-{% endblock %}
-
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block script %}
+    {% endblock %}
 </html>
