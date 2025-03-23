@@ -12,13 +12,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 def base_path(path):
     return os.path.join(BASE_DIR, path)
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -121,6 +120,9 @@ USE_I18N = True
 
 USE_TZ = True
 
+# temp redirects before setting up a home page.
+LOGIN_REDIRECT_URL = "/admin"
+LOGOUT_REDIRECT_URL = "/admin"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
